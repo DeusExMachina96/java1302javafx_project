@@ -1,4 +1,5 @@
 
+
 package javafx_webviewyoutube;
 
 import javafx.application.Application;
@@ -14,16 +15,6 @@ import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
-
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
-import javafx.scene.control.Button;
-import javafx.geometry.Pos;
-import javafx.geometry.Insets;
-import javafx.util.Duration;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.animation.Animation;
@@ -33,51 +24,15 @@ import javafx.animation.Timeline;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.scene.shape.Line;
-import javafx.stage.Stage;
-import javafx.util.Duration;
 import javafx.scene.text.*;
 import javafx.scene.paint.Color;
-
-import javafx.application.Application;
 import static javafx.application.Application.launch;
-import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-import javafx.stage.Stage;
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
-import javafx.scene.control.Button;
-import javafx.geometry.Pos;
-import javafx.geometry.Insets;
-import javafx.util.Duration;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.animation.Animation;
-import javafx.animation.Transition;
-import javafx.animation.PathTransition;
-import javafx.animation.Timeline;
-import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
-import javafx.scene.shape.Line;
-import javafx.stage.Stage;
-import javafx.util.Duration;
-import javafx.scene.text.*;
-import javafx.scene.paint.Color;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.Group;
-import javafx.scene.layout.StackPane;
-
-
-
-
-
 
 public class JavaFX extends Application {
    @Override // Override the start method in the Application class
