@@ -21,6 +21,7 @@ import javafx.util.Duration;
 import javafx.scene.text.*;
 import javafx.scene.paint.Color;
 
+
    
 
 public class Home_View extends Application {

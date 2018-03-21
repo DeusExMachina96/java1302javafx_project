@@ -1,3 +1,12 @@
+package javafx_webviewyoutube;
+
+import javafx.application.Application;
+import static javafx.application.Application.launch;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -47,7 +56,13 @@ public class Author_View extends Application {
       paneForImage.getChildren().add(new ImageView(new Image(
          "author.jpg")));    
       
+       String content_Url = "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/9bZkp7q19f0\" frameborder=\"0\" allowfullscreen></iframe>";
+       
       GridPane paneForVideo = new GridPane();
+       WebView webView = new WebView();
+       WebEngine webEngine = webView.getEngine();
+       webEngine.loadContent(content_Url);
+       paneForVideo.getChildren().add(webView);
            
       
       // Create a border pane
