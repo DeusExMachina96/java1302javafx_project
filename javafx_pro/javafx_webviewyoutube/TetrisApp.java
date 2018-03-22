@@ -61,35 +61,11 @@ public class TetrisApp extends Application {
          
             @Override
             public void handle(ActionEvent event) {
-             
-               Scene scene = new Scene(createContent());
             
-               scene.setOnKeyPressed(
-                  e -> {
-                     if (e.getCode() == KeyCode.SPACE) {
-                        makeMove(p -> p.rotate(), p -> p.rotateBack(), false);
-                     } else if (e.getCode() == KeyCode.LEFT) {
-                        makeMove(p -> p.move(Direction.LEFT), p -> p.move(Direction.RIGHT), false);
-                     } else if (e.getCode() == KeyCode.RIGHT) {
-                        makeMove(p -> p.move(Direction.RIGHT), p -> p.move(Direction.LEFT), false);
-                     } else if (e.getCode() == KeyCode.DOWN) {
-                        makeMove(p -> p.move(Direction.DOWN), p -> p.move(Direction.UP), true);
-                     }
-                  
-                     render();
-                  });
-            
-                // New window (Stage)
-               Stage newWindow = new Stage();
-               newWindow.setTitle("New Game");
-               newWindow.setScene(scene);
-            
-               
-            
-               newWindow.show();
-               
             }
          });
+   
+               
       quit.setOnAction(
          new EventHandler<ActionEvent>() {
          

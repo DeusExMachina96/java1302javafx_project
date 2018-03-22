@@ -193,7 +193,7 @@ public class JavaFX extends Application {
                paneForImage.getChildren().add(new ImageView(new Image(
                   "author.jpg")));    
             
-               String content_Url = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/4r9N0EvRWRg\" frameborder=\"0\" allowfullscreen></iframe>";
+               String content_Url = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/r76glJEPlaQ\" frameborder=\"0\" allowfullscreen></iframe>";
             
                GridPane paneForVideo = new GridPane();
                paneForVideo.setAlignment(Pos.TOP_LEFT);
@@ -296,7 +296,7 @@ public class JavaFX extends Application {
             @Override
             public void handle(ActionEvent event) {
                try { 
-                  Process p = Runtime.getRuntime().exec("F:/javafx_pro/javafx_webviewyoutube/TetrisApp.java");
+                  Process p = Runtime.getRuntime().exec("F:/javafx_pro/javafx_webviewyoutube/TETRIS.exe");
                   Process p2 = Runtime.getRuntime().exec("TetrisApp");
                   
                }catch (IOException e) {  
