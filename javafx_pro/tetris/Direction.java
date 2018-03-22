@@ -1,6 +1,7 @@
 package tetris;
 
-
+//The enum direction holds the constants for the values of the possible
+//directional moves.
 	public enum Direction {
 	    UP(0, -1),
 	    RIGHT(1, 0),
@@ -8,12 +9,14 @@ package tetris;
 	    LEFT(-1, 0);
 
 	    int x, y;
-
+	    // Constructor for Direction which accepts an x & y coordinate
 	    Direction(int x, int y) {
 	        this.x = x;
 	        this.y = y;
 	    }
-
+	    
+	    //This method is also used to describe the 
+	    //placement making sure numbers are positive with ordinal()
 	    public Direction prev() {
 	        int nextIndex = ordinal() - 1;
 
@@ -23,7 +26,9 @@ package tetris;
 
 	        return Direction.values()[nextIndex];
 	    }
-
+	    
+	    //This method is also used to describe the 
+	    //placement making sure numbers are positive with ordinal()
 	    public Direction next() {
 	        int nextIndex = ordinal() + 1;
 

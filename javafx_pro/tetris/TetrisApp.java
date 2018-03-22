@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.Consumer;
 
+//This is the main
 public class TetrisApp extends Application {
 
 	/* These are constant values that determine the size of the game
@@ -93,16 +94,16 @@ public class TetrisApp extends Application {
                 new Piece(1, Direction.RIGHT),
                 new Piece(1, Direction.RIGHT, Direction.DOWN),
                 new Piece(1, Direction.DOWN)));
-        //10
-        // 11  Z shaped block
+        // 01
+        //11   reverse Z shaped block
         original.add(new Tetromino(Color.RED,
    		       new Piece(0, Direction.DOWN),
                new Piece(1, Direction.DOWN, Direction.LEFT),
                new Piece(1, Direction.RIGHT),
                new Piece(1, Direction.DOWN)));
         
-        // 01
-        //11
+        //10
+        // 11  Z shaped block
         original.add(new Tetromino(Color.ORANGE,
     		       new Piece(0, Direction.DOWN),
                 new Piece(1, Direction.DOWN, Direction.RIGHT),
@@ -128,17 +129,18 @@ public class TetrisApp extends Application {
 
         return root;
     }
-
+    //transitional method used to update location after makemove()
     private void update() {
         makeMove(p -> p.move(Direction.DOWN), p -> p.move(Direction.UP), true);
     }
 
+    //Displays the tetromino
     private void render() {
         g.clearRect(0, 0, GRID_WIDTH * TILE_SIZE, GRID_HEIGHT * TILE_SIZE);
 
         tetrominos.forEach(p -> p.draw(g));
     }
-
+    
     private void placePiece(Piece piece) {
         grid[piece.x][piece.y]++;
     }
@@ -146,12 +148,16 @@ public class TetrisApp extends Application {
     private void removePiece(Piece piece) {
         grid[piece.x][piece.y]--;
     }
-
+    //Used to make sure the pieces are out of bounds and receives Piece as argument
     private boolean isOffscreen(Piece piece) {
         return piece.x < 0 || piece.x >= GRID_WIDTH
                 || piece.y < 0 || piece.y >= GRID_HEIGHT;
     }
 
+    /*This method is used to make move and check if the move is possible.
+     * It uses the method 
+     * 
+     */
     private void makeMove(Consumer<Tetromino> onSuccess, Consumer<Tetromino> onFail, boolean endMove) {
         selected.pieces.forEach(this::removePiece);
 
@@ -224,7 +230,7 @@ public class TetrisApp extends Application {
 
         spawn();
     }
-
+    //This method is very used to remove rows after being completed.
     private List<Integer> sweepRows() {
         List<Integer> rows = new ArrayList<>();
 
@@ -241,7 +247,7 @@ public class TetrisApp extends Application {
 
         return rows;
     }
-
+    //Creates the piece that is used by the user
     private void spawn() {
         Tetromino tetromino = original.get(new Random().nextInt(original.size())).copy();
         tetromino.move(GRID_WIDTH / 2, 0);
@@ -256,7 +262,7 @@ public class TetrisApp extends Application {
             System.exit(0);
         }
     }
-
+    // Overriden start function with the scene and possible moves in the game
     @Override
     public void start(Stage stage) throws Exception {
         Scene scene = new Scene(createContent());
